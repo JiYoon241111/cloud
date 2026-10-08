@@ -117,6 +117,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR/'staticfiles'
 
 
 # Email
@@ -128,6 +130,7 @@ MAILERS = {
     },
 }
 
+#  로컬 pc 접속시에는 localhost로, 그 외에는 AWS 탄력적 IP주소를 ALLOWED_HOSTS로 사용
 import socket
 
 if socket.gethostname() == 'DESKTOP-3C56UJ0':
