@@ -127,3 +127,10 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+import socket
+
+if socket.gethostname() == 'DESKTOP-3C56UJ0':
+    ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+else:
+    ALLOWED_HOSTS =['3.39.167.112']
